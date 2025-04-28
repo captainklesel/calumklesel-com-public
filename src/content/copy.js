@@ -1,3 +1,7 @@
+const heroImage = "/assets/images/hero-image.png";
+const aboutImage = "/assets/images/about.png";
+const contactImage = "/assets/images/contact.JPG";
+
 export const copy = {
     home: {
         title: "Welcome!",
@@ -5,7 +9,7 @@ export const copy = {
             <p>Welcome to my corner of the web. This site is an growing showcase of my projects and interests.</p>
             <p>Use the buttons to explore, learn a bit about me, or get in touch. I hope to land new features here all the time—so drop by again soon.</p>
         `,
-        imgSrc: "/assets/images/hero-image.png",
+        imgSrc: heroImage,
         imgAlt: "A photo of Calum",
     },
     about: {
@@ -15,7 +19,7 @@ export const copy = {
             <p>Off the clock you’ll find me carving around town on an electric unicycle, downhill freeskating, or chasing new trails in the foothills. Fresh air fuels the next prototype.</p>
             <p>I believe in curiosity, clear communication, and relentless play-testing—whether it's an enterprise integration or a weekend project. Thanks for visiting; enjoy the tour.</p>
         `,
-        imgSrc: "/assets/images/about.png",
+        imgSrc: aboutImage,
         imgAlt: "A photo of Calum",
     },
     projects: [
@@ -103,7 +107,7 @@ export const copy = {
             <p>Have a question, idea, or opportunity? I’d love to chat.</p>
             <p><a href="mailto:contact@calumklesel.com"><strong>contact@calumklesel.com</strong></a></p>
         `,
-        imgSrc: "/assets/images/contact.JPG",
+        imgSrc: contactImage,
         imgAlt: "A photo of Calum",
     },
     resume: {
