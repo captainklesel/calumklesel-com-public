@@ -1,0 +1,60 @@
+---
+// NavBar.astro
+
+interface props {
+    state: string;
+}
+
+let { state } = Astro.props;
+
+if (!state) {
+    state = 'default';
+}
+
+let buttonStateMap = {
+    default: [ 
+        { text: 'About', targetState: 'about' },
+        { text: 'Resume', targetState: 'resume' },
+        { text: 'Projects', targetState: 'projects' }
+    ],
+    start: [],
+    home: [
+        { text: 'About', targetState: 'about' },
+        { text: 'Resume', targetState: 'resume' },
+        { text: 'Projects', targetState: 'projects' }
+    ],
+    about: [
+        { text: 'Home', targetState: 'home' },
+        { text: 'Resume', targetState: 'resume' },
+        { text: 'Projects', targetState: 'projects' }
+    ],
+    resume: [
+        { text: 'Home', targetState: 'home' },
+        { text: 'About', targetState: 'about' },
+        { text: 'Projects', targetState: 'projects' }
+    ],
+    projects: [
+        { text: 'Home', targetState: 'home' },
+        { text: 'About', targetState: 'about' },
+        { text: 'Resume', targetState: 'resume' }
+    ],
+    contact: [
+        { text: 'Home', targetState: 'home' },
+        { text: 'About', targetState: 'about' },
+        { text: 'Resume', targetState: 'resume' },
+        { text: 'Projects', targetState: 'projects' }
+    ],
+}
+
+let classList = 'container flex-center nav-bar-container';
+
+---
+
+<nav class={classList} id='nav-bar'>
+    {buttonStateMap[state].map((button, index) => (
+        <button key={index} id={`nav-button-${index}`} class="clickable btn btn-primary" data-target-state={button.targetState}>
+            {button.text}
+        </button>
+    ))}
+</nav>
+

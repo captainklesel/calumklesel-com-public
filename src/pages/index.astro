@@ -1,0 +1,117 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import NavBar from '../components/NavBar.astro';
+import Footer from '../components/Footer.astro';
+import DisplayOverlay from '../components/DisplayOverlay.astro';
+import ResumeViewer from '../components/ResumeViewer.astro';
+import { STATES } from '../consts';
+
+//const state = Astro.url.searchParams.get('state') || 'default';
+---
+
+<BaseLayout>
+  <div id="app">
+    <!-- Scene containers as Sections-->
+
+    <!-- Home Scene -->
+    <!-- ----------- -->
+    <section id="scene-home" class="scene" data-scene hidden>
+      <!-- Nav -->
+      <div id="nav-bar" data-navigation>
+        <NavBar state={STATES.HOME} />
+      </div>
+      <DisplayOverlay 
+        image=""
+        image_alt=""
+        title=""
+        text=""
+      />
+      <!-- Footer -->
+      <div id="footer" data-navigation>
+        <Footer />
+      </div>
+    </section>
+
+    <!-- Start Scene  -->
+    <!-- ------------ -->
+    <section id="scene-start" class="scene" data-scene hidden>
+      <div data-navigation hidden>
+        <NavBar state={STATES.START} />
+      </div>
+      <!-- Hero Image -->
+      <div class="container, flex-center" id="start-scene-hero-container">
+        <img src="/src/assets/images/hero-image.png" alt="Hero Image" class="hero-image" id="start-scene-hero-image"/>
+      </div>
+      
+    </section>
+
+    <!-- About Scene -->
+    <!-- ----------- -->
+    <section id="scene-about" class="scene" data-scene hidden>
+      <div id="nav-bar" data-navigation>
+        <NavBar state={STATES.ABOUT} />
+      </div>
+      <DisplayOverlay 
+        image=""
+        image_alt=""
+        title=""
+        text=""
+      />
+      <div id="footer" data-navigation>
+        <Footer />
+      </div>
+    </section>
+
+    <!-- Resume Scene -->
+    <!-- ------------ -->
+    <section id="scene-resume" data-scene hidden>
+      <div id="nav-bar" data-navigation>
+        <NavBar state={STATES.RESUME} />
+      </div>
+      <DisplayOverlay
+        image=""
+        image_alt=""
+        title=""
+        text=""
+      />
+      <div id="footer" data-navigation>
+        <Footer />
+      </div>
+    </section>
+
+    <!-- Projects Scene -->
+    <!-- -------------- -->
+    <section id="scene-projects" class="scene" data-scene hidden>
+      <div id="nav-bar" data-navigation>
+        <NavBar state={STATES.PROJECTS} />
+      </div>
+      <DisplayOverlay 
+        image=""
+        image_alt=""
+        title=""
+        text=""
+      />
+      <div id="footer" data-navigation>
+        <Footer />
+      </div>
+    </section>
+
+    <!-- Contact Scene -->
+    <!-- ------------- -->
+    <section id="scene-contact" data-scene hidden>
+      <div id="nav-bar" data-navigation>
+        <NavBar state={STATES.CONTACT} />
+      </div>
+      <DisplayOverlay 
+        image=""
+        image_alt=""
+        title=""
+        text=""
+      />
+      <div id="footer" data-navigation>
+        <Footer />
+      </div>
+    </section>
+
+  </div>
+</BaseLayout>

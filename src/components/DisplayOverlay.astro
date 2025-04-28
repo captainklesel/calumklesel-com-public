@@ -1,0 +1,39 @@
+---
+// DisplayOverlay.astro
+
+interface props {
+    image: string;
+    image_alt: string;
+    title: string;
+    text: string;
+}
+
+const { image, image_alt, title, text } = Astro.props;
+---
+
+<div class="container" id="display-overlay-container">
+  <!-- Only visible for Projects -->
+  <div class="project-nav hidden">
+    <button class="btn btn-primary" id="proj-prev" aria-label="Previous project">←</button>
+    <button class="btn btn-primary" id="proj-next" aria-label="Next project">→</button>
+  </div>
+  <div class="card card-default" id="display-overlay-card">
+    <div class="overlay-content">
+      <h2 class="overlay-title flex-center" id="overlay-title">{title}</h2>
+      <div class="image-container flex-center"> 
+        <img id="overlay-img" src={image} alt={image_alt} class="overlay-image" loading="lazy" decoding="async"/>
+        <div id="overlay-body" class="overlay-text">
+          {text}
+        </div>
+      </div>
+  </div>
+<style>
+  .overlay-image {
+    width: auto;
+    height: 100%;
+    max-height: min(50vh, 450px);
+    max-width: min(50vw, 450px);
+    border-radius: var(--radius-sm);
+    margin-bottom: var(--spacing-sm);
+  }
+</style>
