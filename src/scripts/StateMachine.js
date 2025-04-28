@@ -1,7 +1,7 @@
 // StateMachine.js
 
 import stateRegistry from './stateRegistry.js';
-import { STATES } from '../consts';
+import { STATES } from '../consts.js';
 
 const StateMachine = (() => {
     let current_state = null;
