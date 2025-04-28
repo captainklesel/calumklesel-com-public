@@ -19,6 +19,7 @@ export function setImgWithFallback(
 
     // one-time error handler
     function handleError() {
+        console.warn(`Image failed to load: ${src}`);
         imgEl.removeEventListener('error', handleError);
         imgEl.src = fallbackSrc;
         imgEl.alt = fallbackAlt;
