@@ -2,7 +2,6 @@
 /* Base layout used by all pages */
 import BaseHead from '../components/BaseHead.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts.js';
-import main from '../main.js?url';
 ---
 
 <html lang="en">
@@ -13,6 +12,6 @@ import main from '../main.js?url';
     <main>
       <slot />
     </main>
-    <script type="module" src={main}></script>
+    <script type="module" src="/src/main.js"></script>
   </body>
 </html>
