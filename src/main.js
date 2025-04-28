@@ -1,7 +1,7 @@
 // main.js
 
-import StateMachine from './StateMachine.js';
-import { STATES } from '../consts.js';
+import StateMachine from './scripts/StateMachine.js';
+import { STATES } from './consts.js';
 
 // 🚀 Boot Sequence
 window.addEventListener('DOMContentLoaded', () => {
