@@ -7,18 +7,42 @@
 
 Lay down a solid technical foundation: Astro static-site build + a lightweight vanilla-JS state-machine, before expanding features. Today it’s a clean, readable SPA with a few interactive elements. Next is to add styling, gamification features for site navigation, animations, VFX, and audio.
 
-## Version 1 Highlights
+## Milestones
 
-Area | What’s implemented
---- | ---
-[x] Astro build | Generates static HTML/CSS/JS; deploy anywhere as plain files.
-[x] Vanilla state machine | enter/exit hooks per scene, singleton pattern, no front-end frameworks.
-[x] Scene manager | Shows/hides sections. URL is updated. (?state=home / projects&index=2).
-[~] Back/Forward sync | popstate listener keeps SPA in line with browser history.
-[x] Copy loader | All page text comes from copy.js so content edits don’t touch templates.
-[~] Utility helpers | setImgWithFallback, lazy-img, etc. for production robustness.
-[ ] Progressive enhancement | Content is still readable without JS; <noscript> notice included.
-[ ] Ready for polish | CSS tokens, utility layers, and component stubs waiting for visual assets.
+**MVP 1:**
+
+- [x] SPA plumbing - URL routing, state machine, and scene manager are all in place.
+- [x] Copy loading - all page text and image src attributes are loaded from a copy.js file-allows for easy editing of the content without touching the code. Copy is loaded with innerHTML for now and will be replaced with a more robust solution later.
+- [x] Visual skeleton – add CSS tokens, utility classes, and component stubs for styling.
+- [x] Deployment pass – ensure the site is deployable to various static file hosts (Render, Netlify, GitHub Pages, S3, Cloudflare Pages, etc.).
+- [x] MVP 1 – ensure the site is fully functional and all features are working as expected. (Tested in Chrome, Safari, and Firefox on Windows, Android, and iOS.)
+- [] Progressive enhancements - content is still readable without JS; <noscript> notice included.
+
+**Version 2+**
+
+- [ ] Visual polish – add visual assets, animations, and VFX and stub out scenes.
+- [ ] Gamification – add unlocks, XP bar, and mini-puzzle to reveal contact information.
+- [ ] Audio/SFX – add sound effects and background music using Howler.js.
+- [ ] Accessibility pass – ensure keyboard navigation is fully accessible and screen-reader friendly.
+- [ ] Mobile pass – ensure mobile experience is smooth and responsive.
+- [ ] SEO pass – ensure all pages are crawlable and indexable by search engines.
+- [ ] Analytics pass – add Google Analytics or similar to track user engagement.
+
+## Current To-Do
+
+Area | Goals | Notes
+--- | --- | ---
+[x] Astro build | Generates static HTML/CSS/JS; deploy anywhere as plain files. | -
+[x] Vanilla state machine | enter/exit hooks per scene, singleton pattern, no front-end frameworks. | -
+[x] Scene manager | Shows/hides sections. URL is updated. (?state=home / projects&index=2). | -
+[~] Back/Forward sync | popstate listener keeps SPA in line with browser history. | Only works for two back/forward clicks; need to add support for more.
+[x] Copy loader | All page text comes from copy.js so content edits don’t touch templates. | Uses innerHTML for now; will be replaced with a more robust solution later.
+[~] Utility helpers | setImgWithFallback, etc. for production robustness. | setImgWithFallback is in place, but needs work.
+[ ] Progressive enhancement | Content is still readable without JS; <noscript> notice included. | -
+
+## Contributing / forking
+
+Feel free to fork and build your own portfolio or resume site. If you improve the core utilities or find bugs, PRs welcome!
 
 ## Quick start
 
@@ -34,41 +58,18 @@ Area | What’s implemented
 
 ``` pgsql
 src/
-├─ content/         copy.js          # all on-page text and image src attributes are here
+├─ content/         copy.js …    (all text content for the site)
+├─ layouts/
+│   └─ BaseLayout.astro
 ├─ scripts/
 │   ├─ SceneManager.js
 │   ├─ StateMachine.js
 │   └─ utils/       setImgWithFallback.js …
 ├─ components/      DisplayOverlay.astro, NavBar.astro …
 ├─ pages/           home.astro, about.astro, projects.astro …
-└─ styles/          globals.css (tokens > utilities > overrides)
-public/assets/      hero.png, fallback.png, placeholder.svg
+└─ styles/          globals.css …
+public/assets/      images/   (all images for the site)
 ```
-
-## Milestones
-
-**MVP 1:**
-
-- [x] SPA plumbing - URL routing, state machine, and scene manager are all in place.
-- [x] Copy loading - all page text and image src attributes are loaded from a copy.js file-allows for easy editing of the content without touching the code. Copy is loaded with innerHTML for now and will be replaced with a more robust solution later.
-- [x] Visual skeleton – add CSS tokens, utility classes, and component stubs for styling.
-- [ ] Deployment pass – ensure the site is deployable to various static file hosts (Render, Netlify, GitHub Pages, S3, Cloudflare Pages, etc.).
-- [ ] MVP 1 – ensure the site is fully functional and all features are working as expected.
-- [] Progressive enhancements - content is still readable without JS; <noscript> notice included.
-
-**Version 2+**
-
-- [ ] Visual polish – add visual assets, animations, and VFX and stub out scenes.
-- [ ] Gamification – add unlocks, XP bar, and mini-puzzle to reveal contact information.
-- [ ] Audio/SFX – add sound effects and background music using Howler.js.
-- [ ] Accessibility pass – ensure keyboard navigation is fully accessible and screen-reader friendly.
-- [ ] Mobile pass – ensure mobile experience is smooth and responsive.
-- [ ] SEO pass – ensure all pages are crawlable and indexable by search engines.
-- [ ] Analytics pass – add Google Analytics or similar to track user engagement.
-
-## Contributing / forking
-
-Feel free to fork and build your own portfolio or resume site. If you improve the core utilities or find bugs, PRs welcome!
 
 ## License
 
