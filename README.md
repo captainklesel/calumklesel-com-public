@@ -16,7 +16,7 @@ Lay down a solid technical foundation: Astro static-site build + a lightweight v
 - [x] Visual skeleton – add CSS tokens, utility classes, and component stubs for styling.
 - [x] Deployment pass – ensure the site is deployable to various static file hosts (Render, Netlify, GitHub Pages, S3, Cloudflare Pages, etc.).
 - [x] MVP 1 – ensure the site is fully functional and all features are working as expected. (Tested in Chrome, Safari, and Firefox on Windows, Android, and iOS.)
-- [] Progressive enhancements - content is still readable without JS; <noscript> notice included.
+- [ ] Progressive enhancements - content is still readable without JS; <noscript> notice included.
 
 **Version 2+**
 
@@ -28,17 +28,15 @@ Lay down a solid technical foundation: Astro static-site build + a lightweight v
 - [ ] SEO pass – ensure all pages are crawlable and indexable by search engines.
 - [ ] Analytics pass – add Google Analytics or similar to track user engagement.
 
-## Current To-Do
+**Current To-Do**
 
-Area | Goals | Notes
---- | --- | ---
-[x] Astro build | Generates static HTML/CSS/JS; deploy anywhere as plain files. | -
-[x] Vanilla state machine | enter/exit hooks per scene, singleton pattern, no front-end frameworks. | -
-[x] Scene manager | Shows/hides sections. URL is updated. (?state=home / projects&index=2). | -
-[~] Back/Forward sync | popstate listener keeps SPA in line with browser history. | Only works for two back/forward clicks; need to add support for more.
-[x] Copy loader | All page text comes from copy.js so content edits don’t touch templates. | Uses innerHTML for now; will be replaced with a more robust solution later.
-[~] Utility helpers | setImgWithFallback, etc. for production robustness. | setImgWithFallback is in place, but needs work.
-[ ] Progressive enhancement | Content is still readable without JS; <noscript> notice included. | -
+- [x] Astro build | Generates static HTML/CSS/JS; deploy anywhere as plain files. | -
+- [x] Vanilla state machine | enter/exit hooks per scene, singleton pattern, no front-end frameworks. | -
+- [x] Scene manager | Shows/hides sections. URL is updated. (?state=home / projects&index=2). | -
+- [~] Back/Forward sync | popstate listener keeps SPA in line with browser history. | Only works for two back/forward clicks; need to add support for more.
+- [x] Copy loader | All page text comes from copy.js so content edits don’t touch templates. | Uses innerHTML for now; will be replaced with a more robust solution later.
+- [~] Utility helpers | setImgWithFallback, etc. for production robustness. | setImgWithFallback is in place, but needs work.
+- [ ] Progressive enhancement | Content is still readable without JS; <noscript> notice included. | -
 
 ## Contributing / forking
 
