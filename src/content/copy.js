@@ -5,7 +5,7 @@ export const copy = {
             <p>Welcome to my corner of the web. This site is an growing showcase of my projects and interests.</p>
             <p>Use the buttons to explore, learn a bit about me, or get in touch. I hope to land new features here all the time—so drop by again soon.</p>
         `,
-        imgSrc: "/src/assets/images/hero-image.png",
+        imgSrc: "/assets/images/hero-image.png",
         imgAlt: "A photo of Calum",
     },
     about: {
