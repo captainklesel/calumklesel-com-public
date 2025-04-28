@@ -13,6 +13,6 @@ import main from '../scripts/main.js?url';
     <main>
       <slot />
     </main>
-    <script type="module" src={main}></script>
+    <script type="module">import "/src/scripts/main.js";</script>
   </body>
 </html>

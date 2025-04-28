@@ -1,4 +1,4 @@
-const heroImage = "/assets/images/hero-image.png";
+const heroImage = "/assets/images/fallback.png";
 const aboutImage = "/assets/images/about.png";
 const contactImage = "/assets/images/contact.JPG";
 
